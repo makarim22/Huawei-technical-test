@@ -9,6 +9,9 @@ app.use(cors());
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
 
+// static HTML file untuk form input
+app.use(express.static('public')); 
+
 // Routes setup
 app.use('/api/data', dataRoutes);
 
